@@ -48,16 +48,16 @@ const LandingScreen = () => {
 
   return (
     <div>
-        <div><h1 className='text-3xl font-bold py-10'>An Image Search APP</h1></div>
+        <div><h1 className='text-2xl lg:text-3xl font-bold py-10 text-center'>An Image Search APP</h1></div>
           
-        <div className='flex items-center justify-center gap-80  pb-10'>
+        <div className='flex flex-col sm:flex-row sm:justify-around items-center justify-center  pb-10'>
         <div>
-        <button className='border rounded-md bg-green-500 hover:bg-green-600 text-white px-5 py-1' onClick={()=>{
+        <button className='border rounded-md bg-green-500 hover:bg-green-600 text-white px-5 py-1 my-5' onClick={()=>{
             setPage((prePage)=>prePage+1)
             // getData();
           }}>Load more</button>
         </div>
-            <div className='flex gap-5'>
+            <div className='flex gap-5 justify-center'>
             <input  className='border-2 rounded-md px-5 py-2' type="text" placeholder='Search Image' onChange={(e)=>setQuery(e.target.value)} />
             <button className='border rounded-md bg-blue-500 hover:bg-blue-600 text-white px-5 py-1'  onClick={()=>{setPage(prePage=>prePage+1)}}>Show result</button>
             </div>
